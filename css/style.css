@@ -328,11 +328,13 @@ body {
   transform: translateY(20px);
   opacity: 0.8;
   transition: all 0.4s ease;
+  pointer-events: none;
 }
 
 .portfolio-card:hover .portfolio-card-overlay {
   transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 
 .portfolio-card-tag {
