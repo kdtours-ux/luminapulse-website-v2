@@ -95,37 +95,25 @@
   window.addEventListener('scroll', updateActiveNav, { passive: true });
 
   // ========== FORM HANDLING ==========
+  // Netlify Forms handles submission automatically
+  // This script provides enhanced UX feedback
   const contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
-      // Show success message
+    // Show loading state when form is submitted
+    contactForm.addEventListener('submit', function() {
       const submitBtn = this.querySelector('.form-submit');
       const originalText = submitBtn.textContent;
       
-      submitBtn.textContent = '發送中...';
+      submitBtn.textContent = submitBtn.textContent.includes('Send') ? 'Sending...' : '發送中...';
       submitBtn.disabled = true;
       
-      // Simulate form submission
+      // Netlify will handle the actual submission
+      // After submission, Netlify redirects to a success page or shows a success message
       setTimeout(() => {
-        submitBtn.textContent = '已發送！';
+        submitBtn.textContent = submitBtn.textContent.includes('Sending') ? 'Sent!' : '已發送！';
         submitBtn.style.background = '#4CAF50';
-        
-        setTimeout(() => {
-          submitBtn.textContent = originalText;
-          submitBtn.style.background = '';
-          submitBtn.disabled = false;
-          contactForm.reset();
-        }, 3000);
-      }, 1500);
-      
-      // Log to console (for debugging)
-      console.log('Form submitted:', data);
+      }, 1000);
     });
   }
 
