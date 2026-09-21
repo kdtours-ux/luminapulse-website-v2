@@ -318,12 +318,14 @@ body {
   transform: scale(1.05);
 }
 
-/* Ensure iframe fills the card properly */
+/* Ensure iframe fills the card properly and stays above overlay */
 .portfolio-card iframe {
   width: 100%;
   height: 100%;
   border: none;
   display: block;
+  position: relative;
+  z-index: 2;
 }
 
 .portfolio-card-overlay {
@@ -331,23 +333,21 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50%;
-  padding: 2rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+  height: auto;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.9);
   transform: translateY(100%);
   opacity: 0;
   transition: all 0.4s ease;
   pointer-events: none;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  z-index: 1;
 }
 
 .portfolio-card:hover .portfolio-card-overlay {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
+  z-index: 3;
 }
 
 .portfolio-card-tag {
