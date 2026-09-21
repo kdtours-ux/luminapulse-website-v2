@@ -318,36 +318,57 @@ body {
   transform: scale(1.05);
 }
 
-/* Ensure iframe fills the card properly and stays above overlay */
+/* Ensure iframe fills the card properly - NO OVERLAY COVERAGE */
 .portfolio-card iframe {
   width: 100%;
   height: 100%;
   border: none;
   display: block;
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
+/* Overlay only shows a small label at top, NEVER covers controls */
 .portfolio-card-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 1rem;
+  left: 1rem;
+  right: auto;
+  bottom: auto;
+  width: auto;
+  max-width: 80%;
   height: auto;
-  padding: 1rem 2rem;
-  background: rgba(0,0,0,0.9);
-  transform: translateY(100%);
+  padding: 0.6rem 1rem;
+  background: rgba(0,0,0,0.85);
+  border-radius: 4px;
+  transform: translateY(-10px);
   opacity: 0;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
+  display: block;
 }
 
 .portfolio-card:hover .portfolio-card-overlay {
   transform: translateY(0);
   opacity: 1;
-  pointer-events: auto;
-  z-index: 3;
+}
+
+/* Compact text styles */
+.portfolio-card-overlay .portfolio-card-tag {
+  font-size: 0.65rem;
+  margin-bottom: 0.2rem;
+}
+
+.portfolio-card-overlay .portfolio-card-title {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.portfolio-card-overlay .portfolio-card-arrow {
+  display: none;
 }
 
 .portfolio-card-tag {
