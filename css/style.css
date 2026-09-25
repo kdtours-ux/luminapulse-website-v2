@@ -845,6 +845,14 @@ body {
   transform: translateY(0);
 }
 
+/* ========== FORM WRAPPER TITLE ========== */
+.contact-form-wrap h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
 /* ========== LINE SERVICE CARD ========== */
 .contact-line-card {
   background: var(--bg-card);

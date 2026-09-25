@@ -330,36 +330,39 @@
           </div>
         </div>
         
-        <form class="contact-form" id="contactForm" name="contact-zh" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
-          <div style="display: none;">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-          </div>
-          <div class="form-group">
-            <label>姓名 / Name</label>
-            <input type="text" name="name" placeholder="您的姓名" required>
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label>需求類型 / Project Type</label>
-            <select name="type" required>
-              <option value="">請選擇</option>
-              <option value="commercial">商業廣告</option>
-              <option value="documentary">紀錄片</option>
-              <option value="musicvideo">音樂錄影帶</option>
-              <option value="event">活動紀錄</option>
-              <option value="automotive">汽車影像</option>
-              <option value="other">其他</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>專案說明 / Project Details</label>
-            <textarea name="message" placeholder="請簡述您的需求、時程與預算..." required></textarea>
-          </div>
-          <button type="submit" class="form-submit">發送訊息</button>
-        </form>
+        <div class="contact-form-wrap">
+          <h3>提出您的需求</h3>
+          <form class="contact-form" id="contactForm" name="contact-zh" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
+            <div style="display: none;">
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </div>
+            <div class="form-group">
+              <label>姓名 / Name</label>
+              <input type="text" name="name" placeholder="您的姓名" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>需求類型 / Project Type</label>
+              <select name="type" required>
+                <option value="">請選擇</option>
+                <option value="commercial">商業廣告</option>
+                <option value="documentary">紀錄片</option>
+                <option value="musicvideo">音樂錄影帶</option>
+                <option value="event">活動紀錄</option>
+                <option value="automotive">汽車影像</option>
+                <option value="other">其他</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>專案說明 / Project Details</label>
+              <textarea name="message" placeholder="請簡述您的需求、時程與預算..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">發送訊息</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
