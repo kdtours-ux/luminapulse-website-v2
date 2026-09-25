@@ -845,6 +845,81 @@ body {
   transform: translateY(0);
 }
 
+/* ========== LINE SERVICE CARD ========== */
+.contact-line-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.contact-line-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.contact-line-badge {
+  display: inline-block;
+  background: #00c300;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.contact-line-card h4 {
+  color: var(--accent);
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.contact-line-card p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.contact-line-qr {
+  width: 100px;
+  height: 100px;
+  margin: 0.5rem auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.contact-line-qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-line-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.contact-line-btn:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
   .nav {
